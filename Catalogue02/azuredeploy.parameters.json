@@ -1,0 +1,39 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "australiaeast"
+        },
+        "virtualMachineName02": {
+            "value": "vmlinux002"
+        },
+        "virtualMachineSize02": {
+            "value": "Standard_DS3"
+        },
+        "adminUsername": {
+            "value": "vmadmin"
+        },
+        "virtualNetworkName": {
+            "value": "vnet001"
+        },
+        "adminPassword": {
+            "value": "Welcome@12345"
+        },
+        "subnetName": {
+            "value": "subnet001"
+        },
+        "OS_publisher02": {
+            "value": "MicrosoftWindowsServer"
+        },
+        "OS_offer02": {
+            "value": "WindowsServer"
+        },
+        "OS_sku02": {
+            "value": "2012-R2-Datacenter"
+        },
+        "OS_version02": {
+            "value": "latest"
+        }
+    }
+}
