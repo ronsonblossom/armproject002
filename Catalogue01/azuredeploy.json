@@ -128,9 +128,9 @@
         }
     ],
     "outputs": {
-        "adminUsername": {
+        "privateIPAddress ": {
             "type": "string",
-            "value": "[parameters('adminUsername')]"
+            "value": "[reference(variables('networkInterfaceName')).ipConfigurations[0].properties.privateIPAddress]"
         }
     }
 }
