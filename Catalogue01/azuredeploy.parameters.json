@@ -1,0 +1,39 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "australiaeast"
+        },
+        "virtualMachineName01": {
+            "value": "vmlinux001"
+        },
+        "virtualMachineSize01": {
+            "value": "Standard_DS3"
+        },
+        "adminUsername": {
+            "value": "vmadmin"
+        },
+        "virtualNetworkName": {
+            "value": "vnet001"
+        },
+        "adminPassword": {
+            "value": "Welcome@12345"
+        },
+        "subnetName": {
+            "value": "subnet001"
+        },
+        "OS_publisher01": {
+            "value": "Canonical"
+        },
+        "OS_offer01": {
+            "value": "UbuntuServer"
+        },
+        "OS_sku01": {
+            "value": "16.04.0-LTS"
+        },
+        "OS_version01": {
+            "value": "latest"
+        }
+    }
+}
