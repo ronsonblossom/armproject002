@@ -2,5 +2,11 @@
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
     "parameters": {
+        "vnetName": { "value": "vnet001" },
+        "vnetAddressPrefix": { "value": "10.254.0.0/16" },
+        "vnetLocation": {"value": "Australia East"},
+        "subnet1Prefix": { "value": "10.254.1.0/24" },
+        "subnet1Name": { "value": "subnet001" },
+        "NSG1Name": { "value": "nsg001" },
     }
 }
