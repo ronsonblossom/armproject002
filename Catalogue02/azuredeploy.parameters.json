@@ -6,7 +6,7 @@
             "value": "australiaeast"
         },
         "virtualMachineName02": {
-            "value": "vmlinux002"
+            "value": "vmwindows001"
         },
         "virtualMachineSize02": {
             "value": "Standard_DS3"
