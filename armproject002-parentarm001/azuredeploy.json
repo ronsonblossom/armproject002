@@ -7,7 +7,7 @@
 
         "arm001-name": "vnet-subnet-nsg-mapped",
         "arm001-tlink": "https://raw.githubusercontent.com/ronsonblossom/armproject002/master/vnet-subnet-nsg-mapped/azuredeploy.json",
-        "arm001-plink":  "https://raw.githubusercontent.com/ronsonblossom/armproject002/master/vnet-subnet-nsg-mapped/azuredeploy.parameters.json",
+        "arm001-plink": "https://raw.githubusercontent.com/ronsonblossom/armproject002/master/vnet-subnet-nsg-mapped/azuredeploy.parameters.json",
 
         "arm002-name": "Catalogue01",
         "arm002-tlink": "https://raw.githubusercontent.com/ronsonblossom/armproject002/master/Catalogue01/azuredeploy.json",
@@ -97,5 +97,9 @@
         }
     ],
     "outputs": {
+        "result ": {
+            "type": "string",
+            "value": "[reference(variables('arm004-name')).outputs.privateIPAddress ]"
+        }
     }
 }
