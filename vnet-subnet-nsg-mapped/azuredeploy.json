@@ -23,14 +23,14 @@
                 "description": "Vnet location"
             }
         },
-        "subnet1Prefix": {
+        "subnetPrefix": {
             "type": "string",
             "defaultValue": "10.0.0.0/24",
             "metadata": {
                 "description": "Subnet 1 Prefix"
             }
         },
-        "subnet1Name": {
+        "subnetName": {
             "type": "string",
             "defaultValue": "Subnet1",
             "metadata": {
@@ -115,9 +115,9 @@
                 },
                 "subnets": [
                     {
-                        "name": "[parameters('subnet1Name')]",
+                        "name": "[parameters('subnetName')]",
                         "properties": {
-                            "addressPrefix": "[parameters('subnet1Prefix')]",
+                            "addressPrefix": "[parameters('subnetPrefix')]",
                             "networkSecurityGroup": {
                                 "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('NSG1Name'))]"
                             }
