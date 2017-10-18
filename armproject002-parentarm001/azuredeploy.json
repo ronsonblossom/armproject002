@@ -97,9 +97,17 @@
         }
     ],
     "outputs": {
-        "result ": {
+        "VM01": {
             "type": "string",
-            "value": "[reference(variables('arm004-name')).outputs.privateIPAddress ]"
+            "value": "[reference(variables('arm002-name')).outputs.privateIPAddress.value]"
+        },
+        "VM02": {
+            "type": "string",
+            "value": "[reference(variables('arm003-name')).outputs.privateIPAddress.value]"
+        },
+        "VM03": {
+            "type": "string",
+            "value": "[reference(variables('arm004-name')).outputs.privateIPAddress.value]"
         }
     }
 }
