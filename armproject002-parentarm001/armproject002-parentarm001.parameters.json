@@ -1,0 +1,49 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "virtualNetworkName": { "value": "vnet001" },
+        "vnetAddressPrefix": { "value": "10.254.0.0/16" },
+        "vnetLocation": { "value": "Australia East" },
+        "subnetPrefix": { "value": "10.254.1.0/24" },
+        "subnetName": { "value": "subnet001" },
+        "NSG1Name": { "value": "nsg001" },
+        "adminUsername": { "value": "vmadmin" },
+        "adminPassword": { "value": "Welcome@12345" },
+
+        "virtualMachineName01": { "value": "vmlinux001" },
+        "virtualMachineSize01": { "value": "Standard_DS3" },
+        "OS_publisher01": { "value": "Canonical" },
+        "OS_offer01": { "value": "UbuntuServer" },
+        "OS_sku01": { "value": "16.04.0-LTS" },
+        "OS_version01": { "value": "latest" },
+
+        "virtualMachineName02": { "value": "vmwindows001" },
+        "virtualMachineSize02": { "value": "Standard_DS3" },
+        "OS_publisher02": { "value": "MicrosoftWindowsServer" },
+        "OS_offer02": { "value": "WindowsServer" },
+        "OS_sku02": { "value": "2012-R2-Datacenter" },
+        "OS_version02": { "value": "latest" },
+
+        "virtualMachineName03": { "value": "vmwindows002" },
+        "virtualMachineSize03": { "value": "Standard_DS12_v2" },
+        "OS_publisher03": { "value": "MicrosoftSQLServer" },
+        "OS_offer03": { "value": "SQL2016SP1-WS2016" },
+        "OS_sku03": { "value": "Enterprise" },
+        "OS_version03": { "value": "latest" },
+        "sqlConnectivityType": { "value": "Private" },
+        "sqlPortNumber": { "value": 1433 },
+        "sqlStorageDisksCount": {"value": 1},
+        "sqlStorageWorkloadType": {"value": "GENERAL"},
+        "sqlStorageDisksConfigurationType": {"value": "NEW"},
+        "sqlStorageStartingDeviceId": {"value": 2},
+        "sqlStorageDeploymentToken": {"value": 28539},
+        "sqlAutopatchingDayOfWeek": {"value": "Sunday"},
+        "sqlAutopatchingStartHour": {"value": "2"},
+        "sqlAutopatchingWindowDuration": {"value": "60"},
+        "sqlAuthenticationLogin": {"value": "vmadmin"},
+        "sqlAuthenticationPassword": {"value": "Welcome@12345"},
+        "rServicesEnabled": {"value": "false"}
+
+    }
+}
