@@ -126,7 +126,7 @@
         }
     ],
     "outputs": {
-        "privateIPAddress ": {
+        "privateIPAddress": {
             "type": "string",
             "value": "[reference(variables('networkInterfaceName')).ipConfigurations[0].properties.privateIPAddress]"
         }
