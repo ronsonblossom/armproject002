@@ -110,7 +110,7 @@
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "2016-09-01",
             "location": "[parameters('location')]",
-            "dependsOn": [],
+            "dependsOn": [ ],
             "properties": {
                 "ipConfigurations": [
                     {
@@ -124,6 +124,25 @@
                     }
                 ]
 
+            }
+        },
+        {
+            "apiVersion": "2015-06-15",
+            "type": "Microsoft.Compute/virtualMachines/extensions",
+            "name": "[concat(parameters('virtualMachineName01'), '/CustomScriptForLinux')]",
+            "location": "[parameters('location')]",
+            "dependsOn": [
+                "[concat('Microsoft.Compute/virtualMachines/', parameters('virtualMachineName01'))]"
+            ],
+            "properties": {
+                "type": "CustomScriptForLinux",
+                "publisher": "Microsoft.OSTCExtensions",
+                "typeHandlerVersion": "1.4",
+                "autoUpgradeMinorVersion": "true",
+                "settings": {
+                    "fileUris": ["https://raw.githubusercontent.com/ronsonblossom/armproject002/master/custom_data.sh"],
+                    "commandToExecute": "sh custom_data.sh"
+                }
             }
         }
     ],
