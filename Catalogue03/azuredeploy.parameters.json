@@ -1,0 +1,78 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "australiaeast"
+        },
+        "virtualMachineName03": {
+            "value": "vmwindows002"
+        },
+        "virtualMachineSize03": {
+            "value": "Standard_DS12_v2"
+        },
+        "adminUsername": {
+            "value": "vmadmin"
+        },
+        "virtualNetworkName": {
+            "value": "vnet001"
+        },
+        "adminPassword": {
+            "value": "Welcome@12345"
+        },
+        "subnetName": {
+            "value": "subnet001"
+        },
+        "OS_publisher03": {
+            "value": "MicrosoftSQLServer"
+        },
+        "OS_offer03": {
+            "value": "SQL2016SP1-WS2016"
+        },
+        "OS_sku03": {
+            "value": "Enterprise"
+        },
+        "OS_version03": {
+            "value": "latest"
+        },
+        "sqlConnectivityType": {
+            "value": "Private"
+        },
+        "sqlPortNumber": {
+            "value": 1433
+        },
+        "sqlStorageDisksCount": {
+            "value": 1
+        },
+        "sqlStorageWorkloadType": {
+            "value": "GENERAL"
+        },
+        "sqlStorageDisksConfigurationType": {
+            "value": "NEW"
+        },
+        "sqlStorageStartingDeviceId": {
+            "value": 2
+        },
+        "sqlStorageDeploymentToken": {
+            "value": 28539
+        },
+        "sqlAutopatchingDayOfWeek": {
+            "value": "Sunday"
+        },
+        "sqlAutopatchingStartHour": {
+            "value": "2"
+        },
+        "sqlAutopatchingWindowDuration": {
+            "value": "60"
+        },
+        "sqlAuthenticationLogin": {
+            "value": "vmadmin"
+        },
+        "sqlAuthenticationPassword": {
+            "value": "Welcome@12345"
+        },
+        "rServicesEnabled": {
+            "value": "false"
+        }
+    }
+}
