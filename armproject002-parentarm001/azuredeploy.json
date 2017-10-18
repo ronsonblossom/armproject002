@@ -1,0 +1,154 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+    },
+    "variables": {
+        "arm001-name": "vnet-subnet-nsg-mapped",
+        "arm001-tlink": "https://raw.githubusercontent.com/ronsonblossom/armproject002/master/vnet-subnet-nsg-mapped/azuredeploy.json",
+        "arm000-plink": "",
+
+        "arm002-name": "Catalogue01",
+        "arm002-tlink": "https://raw.githubusercontent.com/ronsonblossom/armproject002/master/Catalogue01/azuredeploy.json",
+        "arm002-plink": "",
+
+        "arm003-name": "Catalogue02",
+        "arm003-tlink": "https://raw.githubusercontent.com/ronsonblossom/armproject002/master/Catalogue02/azuredeploy.json",
+        "arm003-plink": "",
+
+        "arm004-name": "Catalogue03",
+        "arm004-tlink": "https://raw.githubusercontent.com/ronsonblossom/armproject002/master/Catalogue03/azuredeploy.json",
+        "arm004-plink": ""
+    },
+    "resources": [
+        {
+            "apiVersion": "2015-01-01",
+            "name": "[variables('arm001-name')]",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+                "mode": "incremental",
+                "templateLink": {
+                    "uri": "[variables('arm001-tlink')]",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parametersLink": {
+                    "uri": "[variables('arm001-plink')]",
+                    "contentVersion": "1.0.0.0"
+                }
+            }
+        },
+        {
+            "apiVersion": "2015-01-01",
+            "name": "[variables('arm002-name')]",
+            "type": "Microsoft.Resources/deployments",
+            "dependsOn": [
+                "[concat('Microsoft.Resources/deployments/', variables('arm001-name'))]"
+            ],
+            "properties": {
+                "mode": "incremental",
+                "templateLink": {
+                    "uri": "[variables('arm002-tlink')]",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parametersLink": {
+                    "uri": "[variables('arm002-plink')]",
+                    "contentVersion": "1.0.0.0"
+                }
+            }
+        },
+        {
+            "apiVersion": "2015-01-01",
+            "name": "[variables('arm003-name')]",
+            "type": "Microsoft.Resources/deployments",
+            "dependsOn": [
+                "[concat('Microsoft.Resources/deployments/', variables('arm001-name'))]"
+            ],
+            "properties": {
+                "mode": "incremental",
+                "templateLink": {
+                    "uri": "[variables('arm003-tlink')]",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parametersLink": {
+                    "uri": "[variables('arm003-plink')]",
+                    "contentVersion": "1.0.0.0"
+                }
+            }
+        },
+        {
+            "apiVersion": "2015-01-01",
+            "name": "[variables('arm004-name')]",
+            "type": "Microsoft.Resources/deployments",
+            "dependsOn": [
+                "[concat('Microsoft.Resources/deployments/', variables('arm001-name'))]"
+            ],
+            "properties": {
+                "mode": "incremental",
+                "templateLink": {
+                    "uri": "[variables('arm004-tlink')]",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parametersLink": {
+                    "uri": "[variables('arm004-plink')]",
+                    "contentVersion": "1.0.0.0"
+                }
+            }
+        },
+        {
+            "apiVersion": "2015-01-01",
+            "name": "[variables('arm005-name')]",
+            "type": "Microsoft.Resources/deployments",
+            "dependsOn": [
+                "[concat('Microsoft.Resources/deployments/', variables('arm001-name'))]"
+            ],
+            "properties": {
+                "mode": "incremental",
+                "templateLink": {
+                    "uri": "[variables('arm005-tlink')]",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parametersLink": {
+                    "uri": "[variables('arm005-plink')]",
+                    "contentVersion": "1.0.0.0"
+                }
+            }
+        },
+        {
+            "apiVersion": "2015-01-01",
+            "name": "[variables('arm006-name')]",
+            "type": "Microsoft.Resources/deployments",
+            "dependsOn": [
+                "[concat('Microsoft.Resources/deployments/', variables('arm001-name'))]"
+            ],
+            "properties": {
+                "mode": "incremental",
+                "templateLink": {
+                    "uri": "[variables('arm006-tlink')]",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parametersLink": {
+                    "uri": "[variables('arm006-plink')]",
+                    "contentVersion": "1.0.0.0"
+                }
+            }
+        },
+        {
+            "apiVersion": "2015-01-01",
+            "name": "[variables('arm007-name')]",
+            "type": "Microsoft.Resources/deployments",
+            "properties": {
+                "mode": "incremental",
+                "templateLink": {
+                    "uri": "[variables('arm007-tlink')]",
+                    "contentVersion": "1.0.0.0"
+                },
+                "parametersLink": {
+                    "uri": "[variables('arm007-plink')]",
+                    "contentVersion": "1.0.0.0"
+                }
+            }
+        }
+    ],
+    "outputs": {
+    }
+}
